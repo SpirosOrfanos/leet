@@ -25,7 +25,6 @@ public class ZizZagConversion {
             for (int i = numRows-2; i>0 && (count<n); i--) {
                 sb[i].append(s.charAt(count++));
             }
-          //  n--;
         }
         for (int i = 1; i<numRows; i++) {
             sb[0].append(sb[i].toString());
