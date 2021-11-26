@@ -1,13 +1,13 @@
 package mediumtasks;
 
-import java.util.Arrays;
+//https://leetcode.com/problems/longest-palindromic-substring/
 
 public class LongestPalindromicSubstring {
     public static void main(String... args) {
         LongestPalindromicSubstring app = new LongestPalindromicSubstring();
-        app.longestPalindrome("OLOCBABCOKO");
-        app.longestPalindrome("ac");
-        app.longestPalindrome("OCO");
+        //System.out.println( app.longestPalindrome("OLOCBABCOKO"));
+        System.out.println(app.longestPalindrome("ac"));
+      //  System.out.println(app.longestPalindrome("OCO"));
     }
     public String longestPalindrome(String s) {
         if(s == null || s.length() ==0 || s.length() ==1) return s;
@@ -37,6 +37,7 @@ public class LongestPalindromicSubstring {
             }
             max = Math.max(max, res);
         }
-        return max == 1 ? ""+rs.charAt(0): rs;
+
+        return max == 1 ? ""+s.charAt(0): rs;
     }
 }
