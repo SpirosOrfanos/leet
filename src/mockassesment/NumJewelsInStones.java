@@ -22,7 +22,7 @@ Output: 0
 public class NumJewelsInStones {
     public static void main(String... args) {
         NumJewelsInStones app = new NumJewelsInStones();
-    System.out.println(app.numJewelsInStones("bcd", "cba"));
+        System.out.println(app.numJewelsInStones("bcd", "cba"));
     }
 
     public int numJewelsInStones(String jewels, String stones) {
