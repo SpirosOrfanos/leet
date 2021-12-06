@@ -6,8 +6,14 @@ public class ContainerWithMostWater {
         ContainerWithMostWater app = new ContainerWithMostWater();
         System.out.println(app.maxArea(new int[]{1,8,6,2,5,4,8,3,7}));
         System.out.println(app.maxArea(new int[]{1,1}));
+        app.ddd();
         System.out.println(app.maxArea(new int[]{4,3,2,1,4}));
 
+
+    }
+
+    public void ddd()  {
+        throw  new RuntimeException();
     }
 
     public int maxArea(int[] height) {
