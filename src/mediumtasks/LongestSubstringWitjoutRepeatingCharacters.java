@@ -4,7 +4,7 @@ public class LongestSubstringWitjoutRepeatingCharacters {
 
     public static void main(String... args) {
         LongestSubstringWitjoutRepeatingCharacters app = new LongestSubstringWitjoutRepeatingCharacters();
-    System.out.println(app.lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(app.lengthOfLongestSubstring("abcabcbb"));
     }
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() ==0) return 0;
