@@ -1,4 +1,4 @@
-package utils;
+package wgeneric.utils;
 
 public class ListNode {
        public int val;

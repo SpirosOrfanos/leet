@@ -1,4 +1,4 @@
-package generics;
+package wgeneric.generics;
 
 import java.io.IOException;
 import java.util.*;

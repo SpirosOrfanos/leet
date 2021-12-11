@@ -1,4 +1,4 @@
-package generics;
+package wgeneric.generics;
 
 public abstract class PropertiesWrapper {
     private static <T>  ChainHandler<T> forType(final Class<T> type) {

@@ -1,4 +1,4 @@
-package utils;
+package wgeneric.utils;
 
 
 import java.nio.charset.StandardCharsets;

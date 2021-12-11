@@ -1,6 +1,6 @@
 package easytasks;
 
-import utils.ListNode;
+import wgeneric.utils.ListNode;
 
 //https://leetcode.com/problems/add-two-numbers/
 public class AddTwoNumbers {

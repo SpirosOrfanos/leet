@@ -1,6 +1,5 @@
-package generic;
+package wgeneric;
 
-import java.nio.file.attribute.AclEntry;
 import java.util.*;
 public class Bfs {
     public static void main(String... args) {

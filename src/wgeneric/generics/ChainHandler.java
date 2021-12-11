@@ -1,6 +1,4 @@
-package generics;
-
-import org.omg.CORBA.PUBLIC_MEMBER;
+package wgeneric.generics;
 
 import java.util.*;
 
