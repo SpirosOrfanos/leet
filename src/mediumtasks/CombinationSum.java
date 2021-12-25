@@ -5,7 +5,7 @@ import java.util.*;
 public class CombinationSum {
     public static void main(String... args) {
         CombinationSum app = new CombinationSum();
-    System.out.println(app.combinationSum(new int[]{2,3,6,7}, 7));
+        System.out.println(app.combinationSum(new int[]{2,3,6,7}, 7));
     }
 
 
