@@ -16,8 +16,21 @@ public class WordSearchInMatrix {
                 {'A','B','C','E'},
                 {'S','F','E','S'},
                 {'A','D','E','E'}};
-    System.out.println(app.exist(arr, "SEE"));
+        app.minMeetingRooms(new int[][]{{0,30},{15,20},{15,18}, {22,28}});
+    // System.out.println(app.exist(arr, "SEE"));\
     }
+
+    public int minMeetingRooms(int[][] intervals) {
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+        PriorityQueue<Integer> pq = new PriorityQueue();
+        for(int[] interval : intervals){
+            if(!pq.isEmpty() && interval[0] >= pq.peek()){pq.poll();}
+            pq.add(interval[1]);
+        }
+        return pq.size();
+    }
+
+
     public boolean exist(char[][] board, String word) {
         char first = word.charAt(0);
 
