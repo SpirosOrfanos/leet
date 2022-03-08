@@ -32,15 +32,25 @@ public class CheckHeapSize {
         l.stream().findFirst().ifPresent(a -> System.out.println(a));
 
         Map<Integer, Integer> m = new HashMap<>();
-        m.put(1,1);
-        m.put(2,2);
+        m.computeIfAbsent(1, c -> ll(1));
+        m.computeIfAbsent(2, c -> ll(2));
 
-        m.computeIfAbsent(2 , v -> 5);
+    System.out.println(m.get(1));
+        System.out.println(m.get(2));
+        m.computeIfAbsent(2 , c ->   ll(2));
+        System.out.println(m.get(2));
+        m.computeIfAbsent(2, c ->  ll(2));
+        System.out.println(m.get(2));
+        System.out.println(m.get(2));
+        m.computeIfAbsent(3, v -> ll(3));
+        System.out.println(m.computeIfAbsent(4, v ->  ll(4)));
+    // m.entrySet().stream().forEach(e -> System.out.println(e.getKey() + " : " +  e.getValue()));
+    System.out.println(m);
+    }
 
-        m.putIfAbsent(2, 3);
-        m.computeIfAbsent(3, v -> 3);
-    System.out.println(m.computeIfAbsent(4, v -> 555));
-    m.entrySet().stream().forEach(e -> System.out.println(e.getKey() + " : " +  e.getValue()));
+    private static Integer ll(int l) {
+    System.out.println("compute" + l) ;
+        return (int) (Math.random()*2000);
     }
     public static String formatSize(long v) {
         if (v < 1024) return v + " B";
