@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 public class Combinations {
     public static void main(String... args) {
         Combinations combinations = new Combinations();
-        //combinations.combinations(new int[] {1, 2, 3, 4}).forEach(i -> System.out.println((List<Integer>)i));
-        combinations.subsets(new int[] {1, 2, 3, 4}).forEach(i -> System.out.println(i));
+        combinations.combinations(new int[] {1, 2, 3, 4}).forEach(i -> System.out.println((List<Integer>)i));
+        //combinations.subsets(new int[] {1, 2, 3, 4}).forEach(i -> System.out.println(i));
     }
 
     public List<List<Integer>> combinations(int[] arr) {
