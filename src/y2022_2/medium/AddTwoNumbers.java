@@ -3,6 +3,7 @@ package y2022_2.medium;
 import helper.ListNode;
 
 public class AddTwoNumbers {
+
     public static void main(String... args) {
         ListNode l1 = new ListNode(9);
         l1.next = new ListNode(9);
@@ -18,6 +19,56 @@ public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         if(l1 == null && l2 == null) return null;
+        if(l1 == null) return l2;
+        if(l2 == null) return l1;
+        ListNode res = new ListNode(-1);
+        ListNode resw = res;
+        int cur, rem=0;
+        while (l1!=null && l2!=null) {
+            cur = l1.value+l2.value+rem;
+            rem = cur>=10?1:0;
+            cur = cur>=10 ? cur-10:cur;
+            resw.next = new ListNode(cur);
+            l1 = l1.next;
+            l2 = l2.next;
+            resw = resw.next;
+        }
+        if (l1!=null) {
+            while (l1!=null) {
+                cur = l1.value+rem;
+                rem = cur>=10?1:0;
+                cur = cur>=10 ? cur-10:cur;
+                resw.next = new ListNode(cur);
+                l1 = l1.next;
+                resw = resw.next;
+            }
+        }
+
+        if (l2!=null) {
+            while (l2!=null) {
+                cur = l2.value+rem;
+                rem = cur>=10?1:0;
+                cur = cur>=10 ? cur-10:cur;
+                resw.next = new ListNode(cur);
+                l2 = l2.next;
+                resw = resw.next;
+            }
+        }
+
+        if (rem>0)  resw.next = new ListNode(rem);
+
+        return res.next;
+
+
+
+
+
+
+
+
+
+
+       /* if(l1 == null && l2 == null) return null;
         if(l1 == null) return l2;
         if(l2 == null) return l1;
 
@@ -80,6 +131,6 @@ public class AddTwoNumbers {
         }
 
         if(cur>0) res.next = new ListNode(cur);
-        return resw;
+        return resw;*/
     }
 }

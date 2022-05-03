@@ -27,6 +27,7 @@ public class WordSearchInMatrix {
             if(!pq.isEmpty() && interval[0] >= pq.peek()){pq.poll();}
             pq.add(interval[1]);
         }
+    System.out.println(pq.size());
         return pq.size();
     }
 
