@@ -27,9 +27,9 @@ public class MergeIntervals {
         res.add(internals.get(0));
         for (int i = 1;i<internals.size(); i++) {
             Internal temp = internals.get(i);
-            Internal test = res.get(res.size()-1);
-            if (test.end>=temp.start) {
-                if (test.end<temp.end) {
+            Internal PREV = res.get(res.size()-1);
+            if (PREV.end>=temp.start) {
+                if (PREV.end<temp.end) {
                     res.get(res.size()-1).end = temp.end;
                 }
             } else {
